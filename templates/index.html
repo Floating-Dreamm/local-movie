@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本地视频播放器</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="player-section">
+            <div class="controls">
+                <h1>本地视频播放器</h1>
+                <div class="file-selector">
+                    <button id="selectFolder" class="btn">选择本地文件夹</button>
+                    <input type="file" id="folderInput" webkitdirectory directory multiple style="display: none;">
+                </div>
+            </div>
+            <div class="video-container">
+                <video id="videoPlayer" controls>
+                    <source src="" type="video/mp4">
+                    您的浏览器不支持HTML5视频播放。
+                </video>
+            </div>
+        </div>
+        
+        <div class="sidebar">
+            <div class="video-list-section">
+                <div class="video-list-header">
+                    <h2>视频列表</h2>
+                </div>
+                <ul id="videoList" class="video-list">
+                    <!-- 视频列表将通过JavaScript动态生成 -->
+                </ul>
+            </div>
+            
+            <!-- 推荐视频列表 - B站风格 -->
+            <div class="recommend-section">
+                <div class="video-list-header">
+                    <h2>推荐视频</h2>
+                </div>
+                <div class="recommend-list">
+                    <div id="recommendVideos" class="recommend-videos">
+                        <!-- 推荐视频将通过JavaScript动态生成 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
